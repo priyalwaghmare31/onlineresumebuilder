@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder</title>
+    <link rel="stylesheet" href="mp.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Online Resume Builder</h1>
+
+        <!-- Form to take user inputs -->
+        <form id="resumeForm">
+            <div class="section">
+                <h2>Personal Details</h2>
+                <label for="image">Profile Picture:</label>
+                <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select><br><br>
+
+                <label for="address">Permanent Address:</label>
+                <input id="address" name="address" required><br><br>
+
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required><br><br>
+
+                <label for="maritalStatus">Marital Status:</label>
+                <select id="maritalStatus" name="maritalStatus" required>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                </select><br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="section">
+                <h2>Academic Records</h2>
+                <label for="educationQualification">Education Qualification:</label>
+                <textarea type="text" id="educationQualification" placeholder="Please provide the details of your schooling for 10th and 12th grade below, including the name of the school, year of passing, and percentage." name="educationQualification" required></textarea>
+
+                <label for="professionalQualification">Professional Qualification:</label>
+                <textarea type="text" id="professionalEducation" name="professionalEducation" required></textarea>
+
+                <label for="training">Training/Internship Details:</label>
+                <textarea id="training" name="training"></textarea>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <textarea type="text" id="skills" name="skills" required></textarea>
+            </div>
+
+            <div class="section">
+                <h2>Extra Curricular & Achievements</h2>
+                <textarea id="achievements" name="achievements"></textarea>
+            </div>
+
+            <div class="section">
+                <h2>Strengths</h2>
+                <input type="text" id="strengths" name="strengths" required>
+            </div>
+            <div>
+                <h2>Areas of Improvement</h2>
+                <input type="text" id="improvements" name="improvements">
+            </div>
+
+            <div class="section">
+                <h2>Hobbies</h2>
+                <input type="text" id="hobbies" name="hobbies">
+            </div>
+
+            <div class="section">
+                <h2>Personal Details</h2>
+                <label for="fatherName">Father's Name:</label>
+                <input type="text" id="fatherName" name="fatherName" required>
+
+                <label for="languages">Languages Known:</label>
+                <input type="text" id="languages" name="languages" required>
+            </div>
+
+            <div class="section">
+                <h2>Declaration</h2>
+                <textarea id="declaration" name="declaration"
+                    required>I hereby declare that the information provided is true to the best of my knowledge.</textarea>
+            </div>
+
+            <div class="section">
+                <label for="place">Place:</label>
+                <input type="text" id="place" name="place" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <center><button type="button" onclick="generateResume(event)">Generate Resume</button></center>
+        </form>
+
+        <!-- Preview Section (Initially Hidden) -->
+        <div id="resumePreview" class="resume-preview" style="display: none;">
+            <h2><center>Resume Preview</center></h2>
+            <div id="resume"></div>
+        </div>
+    </div>
+
+    <script src="mp.js"></script>
+</body>
+
+</html>
